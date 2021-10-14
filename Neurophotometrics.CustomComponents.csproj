@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <Title>Neurophotometrics - Custom Components Library</Title>
+    <Description>A Bonsai Library containing custom classes for Neurophotometrics</Description>
+    <Authors>Neurophotometrics</Authors>
+    <Copyright>Copyright ©  2021</Copyright>
+    <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageIcon>Neurophotometrics.png</PackageIcon>
+    <PackageOutputPath></PackageOutputPath>
+    <PackageTags>Bonsai Rx Neurophotometrics.CustomComponents</PackageTags>
+    <TargetFramework>net472</TargetFramework>
+    <Features>strict</Features>
+    <Version>0.1.6</Version>
+    <PackageLicenseFile>NeurophotometricsCustomComponentsPublicLicense.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bonsai.Design" Version="2.5.1" />
+    <PackageReference Include="Neurophotometrics" Version="0.4.0" />
+	<PackageReference Include="ZedGraph" Version="5.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resource1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ReactiveGraph.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\NeurophotometricsCustomComponentsPublicLicense.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="Resources\Neurophotometrics.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
